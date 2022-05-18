@@ -1,0 +1,21 @@
+.loadFeed {
+  width: 500px;
+  height: auto;
+  border-radius: 16px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.loadFeed input {
+  outline: none;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 100px;
+  padding: 8px 0;
+  height: 40px;
+  margin-right: 8px;
+}
