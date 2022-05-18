@@ -48,7 +48,7 @@ function TestTwo() {
           body: lorem.generateSentences(5),
           title: lorem.generateWords(1),
           isliked: false,
-          media: `https://media.istockphoto.com/videos/view-of-clouds-over-the-mountains-from-above-video-id1316701553`,
+          // media: `https://media.istockphoto.com/videos/view-of-clouds-over-the-mountains-from-above-video-id1316701553`,
         });
     }
 
@@ -74,7 +74,7 @@ function TestTwo() {
           body: lorem.generateSentences(5),
           title: lorem.generateWords(1),
           isliked: false,
-          media: `https://media.istockphoto.com/videos/view-of-clouds-over-the-mountains-from-above-video-id1316701553`,
+          // media: `https://media.istockphoto.com/videos/view-of-clouds-over-the-mountains-from-above-video-id1316701553`,
         });
     }
 
