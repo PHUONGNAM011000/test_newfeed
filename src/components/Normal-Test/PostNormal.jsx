@@ -8,6 +8,8 @@ import { v4 as uuidv4 } from 'uuid';
 import ListComment from '../ListComment';
 import UseFocus from '../../hooks/use-focus';
 import LongMenu from '../UI/Menu/LongMenu';
+import Player from 'video-react/lib/components/Player';
+import BigPlayButton from 'video-react/lib/components/BigPlayButton';
 
 const PostNormal = (props) => {
   const [cmtNow, setCmtNow] = useState([]);
@@ -66,7 +68,13 @@ const PostNormal = (props) => {
       </div>
       <p>{props.body}</p>
       <div>
-        <img src={props.media} alt="#"></img>
+        {(props.id - 1) % 2 === 0 && <img src={props.media} alt="#"></img>}
+        {(props.id - 1) % 2 !== 0 && (
+          <Player>
+            <source src={props.media} />
+            <BigPlayButton position="center" />
+          </Player>
+        )}
       </div>
       <hr></hr>
       <div className={classes.actions}>

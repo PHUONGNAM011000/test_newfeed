@@ -70,11 +70,7 @@ const Post = (props) => {
         {(props.id - 1) % 2 === 0 && <img src={props.media} alt="#"></img>}
         {(props.id - 1) % 2 !== 0 && (
           <Player>
-            <source
-              src={
-                'https://media.istockphoto.com/videos/view-of-clouds-over-the-mountains-from-above-video-id1316701553'
-              }
-            />
+            <source src={props.media} />
             <BigPlayButton position="center" />
           </Player>
         )}

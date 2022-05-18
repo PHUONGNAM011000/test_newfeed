@@ -33,15 +33,22 @@ function TestOne() {
   const fetchPostsTempHandler = useCallback(async () => {
     let addLiked = [];
     for (let i = 0; i < 10000; i++) {
-      addLiked.push({
-        id: i + 1,
-        body: lorem.generateSentences(5),
-        title: lorem.generateWords(1),
-        isliked: false,
-        media: `https://picsum.photos/id/${Math.floor(
-          Math.random() * 1000
-        )}/200/300`,
-      });
+      if (i % 2 === 0) {
+        addLiked.push({
+          id: i + 1,
+          body: lorem.generateSentences(5),
+          title: lorem.generateWords(1),
+          isliked: false,
+          media: `https://picsum.photos/id/${i + 1}/200/300`,
+        });
+      } else
+        addLiked.push({
+          id: i + 1,
+          body: lorem.generateSentences(5),
+          title: lorem.generateWords(1),
+          isliked: false,
+          media: `https://media.istockphoto.com/videos/view-of-clouds-over-the-mountains-from-above-video-id1316701553`,
+        });
     }
 
     setPostsTemp(addLiked);
@@ -50,13 +57,24 @@ function TestOne() {
   const fetchPostsHandler = useCallback(async () => {
     let addLiked = [];
     for (let i = 0; i < +count; i++) {
-      addLiked.push({
-        id: i + 1,
-        body: lorem.generateSentences(5),
-        title: lorem.generateWords(1),
-        isliked: false,
-        media: `https://picsum.photos/id/${i + 1}/200/300`,
-      });
+      if (i % 2 === 0) {
+        addLiked.push({
+          id: i + 1,
+          body: lorem.generateSentences(5),
+          title: lorem.generateWords(1),
+          isliked: false,
+          media: `https://picsum.photos/id/${Math.floor(
+            Math.random() * 1000
+          )}/200/300`,
+        });
+      } else
+        addLiked.push({
+          id: i + 1,
+          body: lorem.generateSentences(5),
+          title: lorem.generateWords(1),
+          isliked: false,
+          media: `https://media.istockphoto.com/videos/view-of-clouds-over-the-mountains-from-above-video-id1316701553`,
+        });
     }
 
     setPosts(addLiked);
