@@ -128,7 +128,7 @@ function TestTwo() {
     setComments([...all]);
   };
 
-  const addCommentHandler = (item, loadCmt, cmtNow) => {
+  const addCommentHandler = (item, loadCmt) => {
     if (loadCmt) {
       const temp = [...comments];
       temp.push(item);

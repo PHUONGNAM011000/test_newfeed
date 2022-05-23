@@ -10,7 +10,7 @@ const App = () => {
         <Route exact path="/">
           <TestOne />
         </Route>
-        <Route path="/newfeed">
+        <Route exact path="/basic">
           <TestTwo />
         </Route>
       </Switch>
